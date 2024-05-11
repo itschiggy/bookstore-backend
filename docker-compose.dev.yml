@@ -1,0 +1,11 @@
+services:
+  bookstore-backend:
+    build:
+      context: .
+      target: development
+    volumes:
+      - ./:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - "5555:5555"
+    command: npm run dev
